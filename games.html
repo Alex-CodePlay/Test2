@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<div class="header-container">
+			<a href="index.html"> <img src="homepage/profile.jpg" alt="A gamer passionate about computing and IT" class="profile-pic"> </a>
+			<a href="index.html"><h1 class="title">My Portfolio</h1></a>
+			<button class="menu-toggle" aria-label="Toggle navigation menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+		<nav class="navbar">
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="games.html">Games</a></li>
+				<li><a href="hobbies.html">Hobbies</a></li>
+				<li><a href="skills.html">Skills</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section id="games">
+		<div class="container">
+			<h2>Games I Play</h2>
+			
+			<!-- Search Bar -->
+			<div class="search-section">
+				<input 
+					type="text" 
+					id="searchBar" 
+					placeholder="Search games..." 
+					oninput="searchGames()" 
+					class="search-input"
+				/>
+			</div>
+
+			<!-- Filter Section -->
+			<div class="filter-section">
+				<label for="filter">Filter by Genre:</label>
+				<select id="filter" onchange="filterGames()">
+					<option value="all">All</option>
+					<option value="Action">Action</option>
+					<option value="Adventure">Adventure</option>
+					<option value="RPG">RPG</option>
+					<option value="Open-World">Open World</option>
+					<option value="Survival">Survival</option>
+					<option value="Horror">Horror</option>
+					<option value="Fantasy">Fantasy</option>
+					<option value="Sci-Fi">Sci-Fi</option>
+					<option value="Shooter">Shooter</option>
+					<option value="Simulation">Simulation</option>
+					<option value="Puzzle">Puzzle</option>
+					<option value="Platformer">Platformer</option>
+					<option value="Narrative">Narrative</option>
+					<option value="Strategy">Strategy</option>
+					<option value="Multiplayer">Multiplayer</option>
+					<option value="MMO">MMO</option>
+					<option value="Battle-Royale">Battle Royale</option>
+					<option value="Mythology">Mythology</option>
+					<option value="Psychological-Horror">Psychological Horror</option>
+				</select>
+			</div>
+
+			<!-- Games Grid -->
+			<div class="games-grid" id="gamesGrid">
+				<div class="game-card" data-genre="Adventure Action Horror Survival">
+					<img src="games/AQuietPlace.webp" alt="A Quiet Place">
+					<h3>A Quiet Place</h3>
+					<p>Survive in silence against monstrous creatures that hunt by sound in a world of terror and suspense.</p>
+				</div>
+				<div class="game-card" data-genre="Adventure RPG Action Shooter Open-World">
+					<img src="games/Avatar.webp" alt="Avatar Frontiers of Pandora">
+					<h3>Avatar Frontiers of Pandora</h3>
+					<p>Explore the breathtaking and alien world of Pandora, battling enemies to protect its ecosystem.</p>
+				</div>
+				<div class="game-card" data-genre="RPG Fantasy Strategy">
+					<img src="games/Baldur'sGate.webp" alt="Baldur's Gate">
+					<h3>Baldur's Gate</h3>
+					<p>Embark on a legendary adventure in a classic fantasy world filled with danger and intrigue.</p>
+				</div>
+				<div class="game-card" data-genre="Action RPG Adventure Mythology">
+					<img src="games/BlackMythWukong.webp" alt="Black Myth Wukong">
+					<h3>Black Myth Wukong</h3>
+					<p>A visually stunning retelling of Chinese mythology with dynamic combat and breathtaking visuals.</p>
+				</div>
+				<div class="game-card" data-genre="Action Survival Horror Open-World">
+					<img src="games/DaysGone.webp" alt="Days Gone">
+					<h3>Days Gone</h3>
+					<p> Ride through a post-apocalyptic wilderness filled with dangerous humans and hordes of infected.</p>
+				</div>
+				<div class="game-card" data-genre="Action MMO Superhero">
+					<img src="games/DCUniverseOnline.webp" alt="DC Universe Online">
+					<h3>DC Universe Online</h3>
+					<p>Create your own superhero or villain and join epic battles in a world of DC Comics legends.</p>
+				</div>
+				<div class="game-card" data-genre="Horror Multiplayer">
+					<img src="games/DeadByDaylight.webp" alt="Dead By Daylight">
+					<h3>Dead By Daylight</h3>
+					<p>A multiplayer survival horror game where one killer hunts down four survivors.</p>
+				</div>
+				<div class="game-card" data-genre="RPG Survival Horror">
+					<img src="games/DeadIsland1.webp" alt="Dead Island 1">
+					<h3>Dead Island 1</h3>
+					<p>A zombie-infested island where survival depends on skillful melee combat.</p>
+				</div>
+				<div class="game-card" data-genre="Action RPG Survival Horror">
+					<img src="games/DeadIsland2.webp" alt="Dead Island 2">
+					<h3>Dead Island 2</h3>
+					<p>Explore a stylish Los Angeles overrun with zombies while fighting for survival.</p>
+				</div>
+				<div class="game-card" data-genre="Action Survival Horror">
+					<img src="games/DeadRising4.webp" alt="Deadrising 4">
+					<h3>Deadrising 4</h3>
+					<p>Battle hordes of zombies with creative weapons in a festive open-world sandbox.</p>
+				</div>
+				<div class="game-card" data-genre="Action Adventure Sci-Fi">
+					<img src="games/DeadStranding.webp" alt="Dead Stranding">
+					<h3>Dead Stranding</h3>
+					<p>A story-driven adventure about reconnecting humanity in a fractured world.</p>
+				</div><div class="game-card" data-genre="Action Survival Horror">
+					<img src="games/DyingLight1.webp" alt="Dying Light 1">
+					<h3>Dying Light 1</h3>
+					<p>A parkour-based survival game set in a zombie-infested urban environment.</p>
+				</div>
+				<div class="game-card" data-genre="Action Survival Horror">
+					<img src="games/DyingLight2.webp" alt="Dying Light 2">
+					<h3>Dying Light 2</h3>
+					<p>Fight to survive and shape the future of a post-apocalyptic world.</p>
+				</div>
+				<div class="game-card" data-genre="Action RPG Fantasy">
+					<img src="games/EldenRing.webp" alt="Elden Ring">
+					<h3>Elden Ring</h3>
+					<p>An expansive open-world RPG filled with mythical creatures and challenging combat.</p>
+				</div>
+				<div class="game-card" data-genre="Action Horror Multiplayer">
+					<img src="games/EvilDead.jpg" alt="Evil Dead The Game">
+					<h3>Evil Dead The Game</h3>
+					<p>Team up to fight off the forces of evil in the iconic Evil Dead universe.</p>
+				</div>
+				<div class="game-card" data-genre="Action FPS Open-World">
+					<img src="games/FarCry5.webp" alt="Far Cry 5">
+					<h3>Far Cry 5</h3>
+					<p>Fight a doomsday cult in a sprawling, picturesque Montana landscape.</p>
+				</div>
+				<div class="game-card" data-genre="Action FPS Open-World">
+					<img src="games/FarCry6.jpg" alt="Far Cry 6">
+					<h3>Far Cry 6</h3>
+					<p>Lead a revolution against a tyrannical dictator in a vibrant island nation.</p>
+				</div>
+				<div class="game-card" data-genre="Action FPS Open-World">
+					<img src="games/FarCryNewDawn.webp" alt="Far Cry New Dawn">
+					<h3>Far Cry New Dawn</h3>
+					<p>Rebuild and survive in a vivid post-apocalyptic world after nuclear fallout.</p>
+				</div>
+				<div class="game-card" data-genre="Battle-Royale Shooter">
+					<img src="games/Fortnite.webp" alt="Fortnite">
+					<h3>Fortnite</h3>
+					<p>Battle to be the last player standing in a colorful, fast-paced arena.</p>
+				</div>
+				<div class="game-card" data-genre="Action Adventure Open-World">
+					<img src="games/GhostOfTsushima.jpg" alt="Ghost Of Tsushima">
+					<h3>Ghost Of Tsushima</h3>
+					<p>Defend Japan from invaders as a samurai in a breathtaking, historic world.</p>
+				</div>
+				<div class="game-card" data-genre="Action Cyberpunk Platformer">
+					<img src="games/Ghostrunner.jpg" alt="Ghost Runner">
+					<h3>Ghost Runner</h3>
+					<p>A fast-paced cyberpunk parkour game with deadly sword combat.</p>
+				</div>
+				<div class="game-card" data-genre="Action RPG Mythology">
+					<img src="games/GodOfWarRagnarok.webp" alt="God Of War Ragnarok">
+					<h3>God Of War Ragnarok</h3>
+					<p>A father-son journey through Norse mythology, filled with epic battles.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Adventure">
+					<img src="games/GreenHell.jpg" alt="Green Hell">
+					<h3>Green Hell</h3>
+					<p>Survive in the dangerous Amazon rainforest with limited resources.</p>
+				</div>
+				<div class="game-card" data-genre="Action Open-World">
+					<img src="games/GTA5.webp" alt="Grand Theft Auto 5">
+					<h3>Grand Theft Auto 5</h3>
+					<p>Explore a sprawling city filled with heists, chaos, and cinematic storytelling.</p>
+				</div>
+				<div class="game-card" data-genre="Simulation Survival Strategy">
+					<img src="games/MedievalDynasty.webp" alt="Medieval Dynasty">
+					<h3>Medieval Dynasty</h3>
+					<p>Build your medieval village and dynasty while surviving harsh winters.</p>
+				</div>
+				<div class="game-card" data-genre="Horror Multiplayer">
+					<img src="games/Pacify.webp" alt="Pacify">
+					<h3>Pacify</h3>
+					<p>Work together to solve a terrifying mystery in a haunted house.</p>
+				</div>
+				<div class="game-card" data-genre="Horror Multiplayer">
+					<img src="games/Phasmophobia.webp" alt="Phasmophobia">
+					<h3>Phasmophobia</h3>
+					<p>Investigate haunted locations with friends using ghost-hunting tools.</p>
+				</div>
+				<div class="game-card" data-genre="Simulation Strategy">
+					<img src="games/PoliceSimulator.webp" alt="Police Simulator">
+					<h3>Police Simulator</h3>
+					<p>Step into the role of a police officer and patrol the city streets.</p>
+				</div>
+				<div class="game-card" data-genre="Battle-Royale Shooter">
+					<img src="games/PUBG.jpg" alt="PUBG Battlegrounds">
+					<h3>PUBG Battlegrounds</h3>
+					<p>Fight to survive in large-scale battles on sprawling maps.</p>
+				</div>
+				<div class="game-card" data-genre="Action Adventure Open-World">
+					<img src="games/RDR2.webp" alt="Red Dead Redemption 2">
+					<h3>Red Dead Redemption 2</h3>
+					<p>An epic Western adventure with a rich story and stunning open world.</p>
+				</div>
+				<div class="game-card" data-genre="Action RPG Shooter">
+					<img src="games/Remnant1.webp" alt="Remnant 1">
+					<h3>Remnant 1</h3>
+					<p>Battle interdimensional monsters in a post-apocalyptic world.</p>
+				</div>
+				<div class="game-card" data-genre="Action RPG Shooter">
+					<img src="games/Remnant2.jpg" alt="Remnant 2">
+					<h3>Remnant 2</h3>
+					<p>A cooperative survival game with deeper exploration and challenging enemies.</p>
+				</div>
+				<div class="game-card" data-genre="Roguelike Shooter Sci-Fi">
+					<img src="games/Returnal.webp" alt="Returnal">
+					<h3>Returnal</h3>
+					<p>Escape a time loop on a hostile alien planet in this roguelike shooter.</p>
+				</div>
+				<div class="game-card" data-genre="Action Adventure Open-World">
+					<img src="games/RiseOfTheRonin.webp" alt="Rise Of The Ronin">
+					<h3>Rise Of The Ronin</h3>
+					<p>Explore feudal Japan as a skilled samurai during turbulent times.</p>
+				</div>
+				<div class="game-card" data-genre="Action Adventure Exploration">
+					<img src="games/ShadowOfTheTombRider.jpg" alt="Shadow Of The Tomb Raider">
+					<h3>Shadow Of The Tomb Raider</h3>
+					<p>Lara Croft's journey into the depths of a lost civilization.</p>
+				</div>
+				<div class="game-card" data-genre="Adventure Mystery">
+					<img src="games/SherlockHolmes.webp" alt="Sherlock Holmes Chapter One">
+					<h3>Sherlock Holmes Chapter One</h3>
+					<p>Investigate mysteries and solve crimes in an open-world Victorian setting.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Horror Psychological-Horror">
+					<img src="games/SilentHill2.webp" alt="Silent Hill 2">
+					<h3>Silent Hill 2</h3>
+					<p>A haunting journey into a town filled with eerie secrets and terror.</p>
+				</div>
+				<div class="game-card" data-genre="Action Adventure">
+					<img src="games/Spiderman2.jpg" alt="Spider-man 2">
+					<h3>Spider-man 2</h3>
+					<p>Swing through New York City and face iconic villains as Spider-Man.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Strategy">
+					<img src="games/StrandedAlienDawn.webp" alt="Stranded Alien Dawn">
+					<h3>Stranded Alien Dawn</h3>
+					<p>Build and manage a colony while surviving on an alien planet.</p>
+				</div>
+				<div class="game-card" data-genre="Shooter RPG">
+					<img src="games/TheFirstDescendant.webp" alt="The First Descendant">
+					<h3>The First Descendant</h3>
+					<p>Take on enemies with advanced weapons and unique powers.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Horror">
+					<img src="games/TheForest.webp" alt="The Forest">
+					<h3>The Forest</h3>
+					<p>Survive in a dense forest filled with cannibalistic mutants.</p>
+				</div>
+				<div class="game-card" data-genre="RPG Sci-Fi">
+					<img src="games/TheOuterWorlds.webp" alt="The Outer Worlds">
+					<h3>The Outer Worlds</h3>
+					<p>Explore a colonized solar system filled with quirky characters and stories.</p>
+				</div>
+				<div class="game-card" data-genre="Simulation Life">
+					<img src="games/TheSims4.webp" alt="The Sims 4">
+					<h3>The Sims 4</h3>
+					<p>Build homes, relationships, and entire lives in this life simulator.</p>
+				</div>
+				<div class="game-card" data-genre="Adventure Narrative">
+					<img src="games/TheWalkingDead.webp" alt="The Walking Dead Definitive Series">
+					<h3>The Walking Dead Definitive Series</h3>
+					<p>Experience the emotional journey of survivors in a zombie apocalypse.</p>
+				</div>
+				<div class="game-card" data-genre="RPG Fantasy Adventure">
+					<img src="games/TheWitcher3.webp" alt="The Witcher 3">
+					<h3>The Witcher 3</h3>
+					<p>Follow Geralt of Rivia in an open world filled with monsters and mysteries.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Strategy">
+					<img src="games/ThisWarOfMine.webp" alt="This War Of Mine Final Cut">
+					<h3>This War Of Mine Final Cut</h3>
+					<p>Survive as civilians caught in the horrors of war.</p>
+				</div>
+				<div class="game-card" data-genre="Action Adventure Survival Horror">
+					<img src="games/TLOU1.webp" alt="The Last Of Us 1">
+					<h3>The Last Of Us 1</h3>
+					<p>A gripping tale of survival and companionship in a post-apocalyptic world.</p>
+				</div>
+				<div class="game-card" data-genre="Action Adventure Survival Horror">
+					<img src="games/TLOU2.webp" alt="The Last Of Us 2">
+					<h3>The Last Of Us 2</h3>
+					<p>A revenge-driven narrative with emotional depth and harrowing combat.</p>
+				</div>
+				<div class="game-card" data-genre="Action Adventure Exploration">
+					<img src="games/TombRaiderDefinitiveEdition.jpg" alt="Tomb Raider Definitive Edition">
+					<h3>Tomb Raider Definitive Edition</h3>
+					<p>Witness Lara Croft's origin story in an action-packed survival adventure.</p>
+				</div>
+				<div class="game-card" data-genre="Action RPG Sci-Fi">
+					<img src="games/Anthem.webp" alt="Anthem">
+					<h3>Anthem</h3>
+					<p>Suit up in powerful exosuits and explore a stunning, open world filled with dangers and mysteries.</p>
+				</div>
+				<div class="game-card" data-genre="Action RPG Open-World Mythology">
+					<img src="games/AssassinCreedValhalla.webp" alt="Assassin Creed Valhalla">
+					<h3>Assassin Creed Valhalla</h3>
+					<p>Embark on an epic Viking saga as you conquer lands and build your settlement.</p>
+				</div>
+				<div class="game-card" data-genre="RPG Sci-Fi Open-World">
+					<img src="games/Cyberpunk.webp" alt="Cyberpunk">
+					<h3>Cyberpunk</h3>
+					<p>Explore a dystopian future city filled with advanced technology and gripping narratives.</p>
+				</div>
+				<div class="game-card" data-genre="Adventure Narrative Sci-Fi">
+					<img src="games/DBH.webp" alt="Detroit Become Human">
+					<h3>Detroit Become Human</h3>
+					<p>Shape the future of humanity and AI with your decisions in a beautifully crafted futuristic world.</p>
+				</div>
+				<div class="game-card" data-genre="RPG Fantasy Action">
+					<img src="games/DD2.webp" alt="Dragon's Dogma 2">
+					<h3>Dragon's Dogma 2</h3>
+					<p>Embark on an epic adventure in a vast fantasy world filled with mythical creatures and dynamic combat.</p>
+				</div>
+				<div class="game-card" data-genre="Adventure Mystery Narrative">
+					<img src="games/Firewatch.webp" alt="Firewatch">
+					<h3>Firewatch</h3>
+					<p>Experience an emotional story of isolation and discovery as a fire lookout in the wilderness.</p>
+				</div>
+				<div class="game-card" data-genre="Action RPG Fantasy">
+					<img src="games/Forspoken.webp" alt="Forspoken">
+					<h3>Forspoken</h3>
+					<p>Play as Frey, a young woman transported to a magical world, where she must harness newfound powers to survive.</p>
+				</div>
+				<div class="game-card" data-genre="Action RPG Fantasy">
+					<img src="games/Hogwarts.webp" alt="Hogwarts Legacy">
+					<h3>Hogwarts Legacy</h3>
+					<p>Live your wizarding dreams and explore Hogwarts in a rich, open-world adventure.</p>
+				</div>
+				<div class="game-card" data-genre="Action RPG Open-World">
+					<img src="games/HorizonForbiddenWest.webp" alt="Horizon Forbidden West">
+					<h3>Horizon Forbidden West</h3>
+					<p>Venture into a stunning post-apocalyptic world to uncover the secrets of humanity's downfall.</p>
+				</div>
+				<div class="game-card" data-genre="Action RPG Open-World">
+					<img src="games/HorizonZeroDawn.webp" alt="Horizon Zero Dawn">
+					<h3>Horizon Zero Dawn</h3>
+					<p>Explore a beautiful, machine-overrun world and discover the mystery behind its collapse.</p>
+				</div>
+				<div class="game-card" data-genre="Action RPG Dark Fantasy">
+					<img src="games/LordOfTheFallen.webp" alt="Lord Of The Fallen">
+					<h3>Lord Of The Fallen</h3>
+					<p>Challenge fearsome foes in a gothic, immersive world with dynamic combat.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Horror Action">
+					<img src="games/RE2.webp" alt="Resident Evil 2">
+					<h3>Resident Evil 2</h3>
+					<p>Escape the horrors of Raccoon City in this gripping and intense remake.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Horror Action">
+					<img src="games/RE3.webp" alt="Resident Evil 3">
+					<h3>Resident Evil 3</h3>
+					<p>Survive against the terrifying Nemesis in this thrilling reimagining of a classic.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Horror Action">
+					<img src="games/RE4.webp" alt="Resident Evil 4">
+					<h3>Resident Evil 4</h3>
+					<p>Fight to rescue the President's daughter in a chilling and action-packed horror adventure.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Horror Action">
+					<img src="games/RE7.webp" alt="Resident Evil 7">
+					<h3>Resident Evil 7</h3>
+					<p>Escape a twisted plantation as you uncover a family's dark secrets in first-person horror.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Horror Action">
+					<img src="games/REV.webp" alt="Resident Evil Village">
+					<h3>Resident Evil Village</h3>
+					<p>Enter a mysterious village filled with nightmarish creatures and uncover the truth about Ethan's journey.</p>
+				</div>			
+				<div class="game-card" data-genre="Survival Adventure Sci-Fi">
+					<img src="games/SubnauticaBelowZero.webp" alt="Subnautica Below Zero">
+					<h3>Subnautica Below Zero</h3>
+					<p>Explore the icy depths of an alien ocean while uncovering the secrets of its world.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Horror Action">
+					<img src="games/TEW1.webp" alt="The Evil Within 1">
+					<h3>The Evil Within 1</h3>
+					<p>Survive a nightmarish world filled with twisted creatures and psychological terror.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Horror Action">
+					<img src="games/TEW2.webp" alt="The Evil Within 2">
+					<h3>The Evil Within 2</h3>
+					<p>Dive deeper into a surreal world of horrors to save your daughter.</p>
+				</div>
+				<div class="game-card" data-genre="Horror Adventure Interactive-Drama">
+					<img src="games/TheDevilInMe.webp" alt="The Devil In Me">
+					<h3>The Devil In Me</h3>
+					<p>A chilling story of filmmakers trapped in a replica of a serial killer's murder hotel.</p>
+				</div>
+				<div class="game-card" data-genre="Simulation Adventure">
+					<img src="games/TheHunterCallOfTheWild.webp" alt="The Hunter Call Of The Wild">
+					<h3>The Hunter Call Of The Wild</h3>
+					<p>Experience the thrill of hunting in a stunning, open-world environment.</p>
+				</div>
+				<div class="game-card" data-genre="Adventure Puzzle Narrative">
+					<img src="games/TwelveMinutes.webp" alt="Twelve Minutes">
+					<h3>Twelve Minutes</h3>
+					<p>Solve the mystery of a time loop as events repeat in a claustrophobic apartment.</p>
+				</div>
+				<div class="game-card" data-genre="Puzzle Platformer">
+					<img src="games/Unravel1.webp" alt="Unravel 1">
+					<h3>Unravel 1</h3>
+					<p>Guide a tiny yarn figure through beautiful environments in a heartwarming adventure.</p>
+				</div>
+				<div class="game-card" data-genre="Puzzle Platformer">
+					<img src="games/Unravel2.webp" alt="Unravel 2">
+					<h3>Unravel 2</h3>
+					<p>Work together as two yarn figures to navigate challenges and uncover the story.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Horror Psychological-Horror">
+					<img src="games/Visage.webp" alt="Visage">
+					<h3>Visage</h3>
+					<p>Explore a terrifying house filled with haunting memories and unspeakable horrors.</p>
+				</div>
+				<div class="game-card" data-genre="Battle-Royale Shooter">
+					<img src="games/ApexLegends.jpg" alt="Apex Legends">
+					<h3>Apex Legends</h3>
+					<p>A fast-paced and team-based battle royale game where players choose unique characters, each with special abilities, and fight for survival in a futuristic sci-fi world.</p>
+				</div>
+				<div class="game-card" data-genre="Survival Horror Psychological-Horror">
+					<img src="games/UntilDawn.webp" alt="Until Dawn">
+					<h3>Until Dawn</h3>
+					<p>A cinematic horror experience where every decision impacts the story as a group of friends fights to survive a terrifying night in an isolated mountain lodge.</p>
+				</div>
+				
+				<!-- Add more games as needed -->
+			</div>
+		</div>
+	</section>
+	
+    <footer>
+        <p>&copy; 2024 Alex. All rights reserved.</p>
+		<p>Images Generated By OpenAI & Deep AI.</p>
+    </footer>
+	<script src="functions.js"></script>
+</body>
+</html>

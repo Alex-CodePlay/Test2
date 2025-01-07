@@ -1,0 +1,572 @@
+/* Ensure the body and html take up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+	overflow-x: hidden;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #00ffcc;
+	height:100%;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1, h2 {
+    color: #00ffcc;
+}
+
+p {
+	color: white;
+}
+
+a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    position: relative;
+    text-align: center;
+	background-color: #1a1a1a;
+	border-top: 2px solid #00ffcc; /* Optional border for footer */
+    border-bottom: 2px solid #00ffcc; /* Optional border for header */
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin: 0;
+    display: inline-block;
+}
+
+.navbar {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    font-size: 1.2em;
+    padding: 5px 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #00ffcc;
+    color: #272727;
+}
+
+/* Hero Section */
+#home .hero {
+    display: flex;
+    justify-content: center; /* Center align content */
+    gap: 40px; /* Space between the two containers */
+    text-align: center;
+    padding: 20px 20px;
+}
+
+#home .btn-container {
+    display: flex;
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: center; /* Center align the content */
+}
+
+#home .btn-container img {
+    width: 300px; /* Set a fixed width for images */
+    height: auto; /* Keep the image's aspect ratio */
+    margin-bottom: 10px; /* Space between the image and button */
+}
+
+#home .btn-container .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #1a1a1a;
+    background-color: #00ffcc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#home .btn-container .btn:hover {
+    background-color: #00d6b3;
+}
+
+/* Highlights Section */
+#home .aboutme {
+    text-align: center;
+    padding: 20px 20px;
+}
+
+#home .aboutme h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Section Styles */
+section {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Projects Section */
+.project-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.project-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00ffcc;
+    text-decoration: none;
+    border: 1px solid #00ffcc;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.project-card a:hover {
+    background-color: #00ffcc;
+    color: #272727;
+}
+
+/* Contact Section */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    margin-top: 10px;
+    text-align: left;
+}
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+}
+form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #00ffcc;
+    border: none;
+    color: #272727;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #008f99;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+    text-align: center;
+    padding: 5px;
+    background-color: #272727;
+    color: white;
+    position: relative;
+    width: 100%;
+	border-top: 2px solid #00ffcc; /* Optional border for footer */
+    border-bottom: 2px solid #00ffcc; /* Optional border for header */
+
+}
+
+/* General Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    color: #00ffcc;
+}
+
+/* Filter Section */
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section select {
+    padding: 10px;
+    border: 1px solid #00ffcc;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Search Bar Section */
+.search-input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    background-color: #272727;
+    color: #00ffcc;
+    font-size: 1rem;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+/* Games Grid */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic layout */
+    gap: 20px; /* Consistent spacing */
+    justify-items: center;
+}
+
+.game-card {
+    background-color: #333;
+    border: 2px solid #444;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    display: block; /* Default display for all cards */
+}
+
+.no-results-message {
+    grid-column: 1 / -1; /* Span the full width of the grid */
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.game-card h3 {
+    margin: 10px 0 5px;
+    color: #ffcc00;
+}
+
+.game-card p {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    border-color: #00ffcc;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #00ffcc;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        width: 100%;
+        background-color: #1a1a1a;
+        padding: 20px 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        border-top: 1px solid #00ffcc;
+    }
+
+    .navbar.active .nav-links {
+        display: flex;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #00ffcc;
+        padding: 10px;
+        border-radius: 5px;
+        transition: all 0.3s;
+    }
+
+    .nav-links a:hover {
+        background-color: #00ffcc;
+        color: #1a1a1a;
+    }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 10px;
+    }
+
+    .hero img {
+        max-width: 90%; /* Adjust image width */
+    }
+
+    .hero .btn-container {
+        display: block; /* Stack buttons on top of each other */
+        margin: 10px auto;
+    }
+
+    .highlights {
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links for smaller screens */
+        align-items: center;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+}
+
+/* General Section Styling */
+#hobbies {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #00ffcc;
+}
+
+#hobbies h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Styling for the Hobby List */
+.hobbies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hobby-item {
+    background-color: #272727;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.hobby-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #00ffcc;
+}
+
+.hobby-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+.hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Skills Content Styling */
+
+.container-skills {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.container-skills h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00ffcc;
+    padding-bottom: 10px;
+    color: #00ffcc;
+}
+
+.container-skills h3 {
+    font-size: 1.5rem;
+    color: #00ffcc;
+    margin: 20px 0 10px;
+}
+
+.container-skills img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.container-skills ul {
+    list-style-type: disc;
+	list-style-position: inside;
+	padding-left: 0; /* Removes unnecessary left padding */
+    margin-left: 0;	/* Removes unnecessary margin */
+    padding-left: 30px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container-skills li {
+    margin-bottom: 10px;
+}
+
+.container-skills li strong {
+    color: #00ffcc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .header-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .container-skills {
+        width: 95%;
+    }
+
+    .container-skills h2 {
+        font-size: 1.8rem;
+    }
+
+    .container-skills h3 {
+        font-size: 1.3rem;
+    }
+
+    .container-skills img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header .title {
+        font-size: 1.5rem;
+    }
+
+    .container-skills h2 {
+        font-size: 1.5rem;
+    }
+
+    .container-skills h3 {
+        font-size: 1.2rem;
+    }
